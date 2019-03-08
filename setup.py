@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='requests-filecache',
-    version='0.0.2',
+    version='0.0.3',
     packages=['requests_filecache'],
     url='https://github.com/strizhechenko/requests-filecache',
     license='MIT',

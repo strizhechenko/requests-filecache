@@ -9,8 +9,8 @@ def get(url):
     Cache miss: performs request to :param: url and caches it in file ./cache/host/path
     Cache hit: reads cached response from file ./cache/host/path
     """
-    os.makedirs('cache/', exist_ok=True)
     filename = 'cache/' + url.replace('http://', '', 1).replace('https://', '', 1)
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
     if not filename.endswith('.html'):
         filename += '.html'
     if not os.path.exists(filename):
